@@ -6,6 +6,7 @@ License:	GPL
 Group: 		Sound
 URL:		http://www.suse.de/~mana/jack.html
 Source: 	%{name}-%{version}.tar.bz2
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 Requires:	jackit >= 0.44.0
 BuildRequires:	jackit-devel >= 0.44.0, libalsa-devel qt3-devel
 

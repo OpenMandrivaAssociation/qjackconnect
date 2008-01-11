@@ -23,17 +23,6 @@ make QT_LIB_DIR=$QTDIR/%_lib -f make_qjackconnect
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%{_bindir}
 install -m 0755 qjackconnect $RPM_BUILD_ROOT/%{_bindir}
-mkdir -p $RPM_BUILD_ROOT/%{_menudir}
-cat > $RPM_BUILD_ROOT/%{_menudir}/%{name} <<EOF
-?package(%{name}): \
-icon="sound_section.png" \
-needs="x11" \
-section="Multimedia/Sound" \
-title="Qjackconnect" \
-longtitle="Qt-based Jackit Connector" \
-command="%{_bindir}/%{name}" \
-xdg="true"
-EOF
 
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -61,5 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc INSTALL LICENSE
 %{_bindir}/*
-%{_menudir}/%{name}
 %{_datadir}/applications/mandriva-%{name}.desktop

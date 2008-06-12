@@ -37,11 +37,15 @@ Categories=Qt;X-MandrivaLinux-Multimedia-Sound;Audio;
 Encoding=UTF-8
 EOF
 
+%if %mdkversion < 200900
 %post
 %{update_menus}
+%endif
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT

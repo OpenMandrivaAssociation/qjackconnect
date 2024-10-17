@@ -4,7 +4,7 @@ Version: 	0.0.3b
 Release: 	%mkrel 12
 License:	GPL
 Group: 		Sound
-URL:		http://www.suse.de/~mana/jack.html
+URL:		https://www.suse.de/~mana/jack.html
 Source: 	%{name}-%{version}.tar.bz2
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 Requires:	jackit >= 0.44.0

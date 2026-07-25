@@ -1,7 +1,7 @@
 Summary: 	Qt based patchbay for Jack
 Name: 		qjackconnect
 Version: 	0.0.3b
-Release: 	%mkrel 12
+Release: 	13
 License:	GPL
 Group: 		Sound
 URL:		https://www.suse.de/~mana/jack.html
